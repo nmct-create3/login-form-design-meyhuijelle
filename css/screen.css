@@ -1,6 +1,15 @@
 /*------------------------------------*\
 #FONTS
 \*------------------------------------*/
+    @font-face {
+        font-family: 'Inter web';
+        font-weight: 400;
+        src: url('../fonts/Inter-Regular.woff2') format('woff2');
+
+        font-family: 'Inter web sb';
+        font-weight: 600;
+        src: url('../fonts/Inter-SemiBold.woff2') format('woff2');
+    }
 
 /*------------------------------------*\
 #Variables
@@ -25,12 +34,12 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: grey;
+    font-family: "Inter web", Helvetica, arial, sans-serif;
+    color: #20223a;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color: #F5F6FA;
 }
 
 *,
@@ -53,7 +62,7 @@ html {
 }
 
 ::selection {
-    background: HotPink;
+    background: #3385FF;
     color: white;
     text-shadow: none;
 }
@@ -158,18 +167,22 @@ hr {
 }
 
 a {
-    color: HotPink;
+    color:  #3385FF;
     transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: HotPink;
+    color: #0066ff;
 }
 
 a:hover,
 a:focus {
-    color: DeepPink;
+    color: #0066ff;
+}
+
+label, input{
+    display: block;
 }
 
 /*------------------------------------*\
@@ -432,6 +445,32 @@ a:focus {
     Website main logo
 */
 
+.c-logo{
+    height: 24px;
+    /* Logo in het midden plaatsen */
+    display: flex;
+    justify-content: center;
+    /* Logo in het middenb plaatsen */
+    align-items: center;
+}
+
+.c-logo__symbol{
+    display: block;
+    height: 100%;
+}
+
+.c-logo__path--1{
+    fill: #20223A;
+}
+.c-logo__path--2{
+    fill: #3385FF;
+}
+.c-logo__path--3{
+    fill: #1b4186;
+}
+
+
+
 /*
     Component: Card
     ---
@@ -443,6 +482,10 @@ a:focus {
     ---
     Everything form related here
 */
+.c-form-field--option{
+    display: flex;
+    align-items: center;
+}
 
 /*
     Component: Input
@@ -451,10 +494,35 @@ a:focus {
 */
 
 .c-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
 
+    /* 4 regels vs 2 regels */
+
+    
+    all: unset; /* moet bovenaan staan --> reset denk ik, unset echt alles*/
+    box-sizing: border-box;
+
+    display: block;
+    width: 100%;
+    border: 1px solid #E2E3E7;
+    background-color: white;
+    border-radius: 3px;
+    line-height: 24px;
+    padding: 11px 12px;
 }
 
+
+
 .c-input:focus {
+    /* box-shadow: 0 0 0 3px #3385ff ; */
+    
+    /* box-shadow: h-offset v-offset blur spread color; */
+    box-shadow: 0 0 0 3px #3385ff4d;
+    border-color: #4F95FF;
+     
 }
 
 /*
@@ -480,7 +548,13 @@ a:focus {
 */
 
 .c-button {
-
+    font-size: 16px;
+    border-radius: 3px;
+    border: 5px soilid black;
+    color: #FFFFFF;
+    background-color: #3385FF;
+    padding: 16px 47%;
+    border-color: #1550a8;
 }
 
 .c-button:hover {
