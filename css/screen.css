@@ -497,21 +497,31 @@ label, input{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+
+    /* Om duidelijk te maken in welk inputveld je zit krijgt het inputveld een outline als het gefocust is. */
     outline: none;
 
     /* 4 regels vs 2 regels */
 
     
-    all: unset; /* moet bovenaan staan --> reset denk ik, unset echt alles*/
+    all: unset; /* moet bovenaan staan --> reset denk ik, unset echt alles! gevaarlijk!*/
     box-sizing: border-box;
 
     display: block;
+
     width: 100%;
+    /* --> input veld over de volledige breedte */
+
     border: 1px solid #E2E3E7;
     background-color: white;
     border-radius: 3px;
+    font-size: 16px;
     line-height: 24px;
     padding: 11px 12px;
+
+    font-family: inherit;
+    
+    color: #20223A;
 }
 
 
@@ -549,23 +559,31 @@ label, input{
 
 .c-button {
     font-size: 16px;
+    font-family: "Inter web sb";
     border-radius: 3px;
-    border: 5px soilid black;
+    border: 1px soilid black;
     color: #FFFFFF;
     background-color: #3385FF;
-    padding: 16px 47%;
+    /* padding: 16px 47%; */
+    line-height: 21px;
+    padding: 14px 0 10px 0;
+    width: 100%;
     border-color: #1550a8;
+    
 }
 
 .c-button:hover {
+    background-color: #4F95FF;
 
 }
 
 .c-button:focus {
-
+    background-color: #3385FF;
 }
 
 .c-button:active {
+    outline: none;
+    background-color: #2E77E6;
 
 }
 
